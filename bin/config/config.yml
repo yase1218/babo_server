@@ -1,0 +1,92 @@
+#开发阶段各服配置放在一起 便于调试
+#生产环境下 配置各自分开
+
+#testserver
+testserver:
+  host: 127.0.0.1
+  port: 100086
+  usewhite: false
+  whitelist:
+    - 127.0.0.1
+  useblack: false
+  blacklist:
+
+#gateserver
+gateserver:
+  client:
+    host: 127.0.0.1
+    port: 10001
+    usewhite: false
+    whitelist:
+      - 127.0.0.1
+      - 127.0.0.1
+    useblack: false 
+    blacklist:
+  game:
+    host: 127.0.0.1
+    port: 10002
+    opentls: true
+  # public_key: MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEApT21gsFL8Xsa53hloezANjdhZjvbmvhMqGcf4jpxQw3ANzpEBBjuKw9EjnA6dJNJwM+WRLe7DXpLAMe9F7AVtoOhYnHZ3C8Ubq14H0F1ZJxrM0izRp/1cOBUKuQSEs2weGtkEh9kP7ybThNZKfyuu7nVK+YkpV4xXRwc+xXN6gYdEVSHzEb2ANl3BzkJ7gxko2Wpfs8789tMySnoMzRt5/WoJNd+nP8UZGlKfCV4q15o62K6P0bFZVoz6yB26U7rP7ups/z/B0iD8Ox3/71+od766vt9rE08L3QTPyx4+724h11ClTxc6ECRWe+r8W6ZIwH6N2/mdCK0N24O2YeHeTCYC1PqqZ3TjdrRb9ck87V15EfUTRs0SR6YvaQosEzyJlB6yB6Wyyil4exvpG/gE92gJPUCaDnLCuBM4AetidrtUT9Wf0mDqJ3ieQONu7hnD5prpD6qx+UG5jAae8M/MvLsYnrl1NLj/K9Il8jzoOIE3cuR2/zb+Pdbz4ump0ySLAWZtoJa557IUSuwSMmg5mUXeJg8J8y/0v8DHj8sx05MHtN6Yn7BrPQhjl9huLX5H6YFWLOXw93wdJF3GvC1UWHxK1puWvdjR/b9FOTXN7TCSSomFiGIdy1lc50NG1uqPQN62LVAcxYZnqK2sXUyNouOYljhyUhMewcBiyIlIRECAwEAAQ==
+  private_key: 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
+  aes_key: tsEEZXBvyvtLuYbfNUoYYFTYkwNXIFHh
+  
+#gameserver
+gameserver:
+  gate:
+    host: 127.0.0.1
+    port: 10002
+    opentls: true
+  login:
+    host: 127.0.0.1
+    port: 10003
+    opentls: true
+  mongo:
+    host: admin:WowStudio_666@127.0.0.1:27017/st?maxPoolSize=2000&socketTimeoutMS=5000
+    database: st
+    poolsize: 10
+  mysql:
+    ip: 127.0.0.1
+    port: 3306
+    user: root
+    pwd: 111111
+    dbname: babo_game
+  host: 127.0.0.1
+  port: 10005
+  workid: 1
+  datacenterid: 1
+  jsonpath: ../json
+
+#loginserver
+loginserver:
+  http:
+    host: 192.168.1.123
+    port: 10004
+    usewhite: false
+    whitelist:
+      - 127.0.0.1
+      - 127.0.0.1
+    useblack: false 
+    blacklist:
+    opentls: false
+  rpc:
+    host: 127.0.0.1
+    port: 10003
+    opentls: false
+  mysql:
+    source: root:111111@tcp(127.0.0.1:3306)/account?charset=utf8mb4&parseTime=True&loc=Local
+    maxidle: 20
+    maxopen: 200
+    maxlifetime: 300
+  redis:
+    addr: 127.0.0.1:6379
+    password: 
+    cluster: false
+    db: 0
+    dialtimeout: 1000
+    readtimeout: 400
+    writetimeout: 600
+  token_aes_key: tsEEZXBvyvtLuYbfNUoYYFTYkwNXIFHh  
+  session_aes_key: tsEEZXBvyvtLuYbfNUoYYFTYkwNXIFHh  
+  platform_aes_key: tsEEZXBvyvtLuYbfNUoYYFTYkwNXIFHh  
+
+

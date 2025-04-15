@@ -1,0 +1,139 @@
+{
+    "folders": [
+		{
+			"name": "game",
+			"path": "game"
+		},
+		{
+			"name": "orm",
+			"path": "orm"
+		},
+		{
+			"name": "db",
+			"path": "db"
+		},
+		{
+			"name": "pb",
+			"path": "pb"
+		},		
+		{
+			"name": "pb_code",
+			"path": "pb_code"
+		},
+		{
+			"name": "utility",
+			"path": "utility"
+		},
+		{
+			"name": "tool",
+			"path": "tool"
+		},
+		{
+			"name": "bin",
+			"path": "bin"
+		}
+	],
+    "settings": {
+        "go.delveConfig": {
+			"debugAdapter": "legacy",
+			"dlvLoadConfig": {
+				"followPointers": true,
+				"maxVariableRecurse": 1,
+				"maxStringLen": 64,
+				"maxArrayValues": 64,
+				"maxStructFields": -1
+			}
+		},
+		"workbench.colorCustomizations": {
+			"activityBar.activeBackground": "#3399ff",
+			"activityBar.background": "#3399ff",
+			"activityBar.foreground": "#15202b",
+			"activityBar.inactiveForeground": "#15202b99",
+			"activityBarBadge.background": "#bf0060",
+			"activityBarBadge.foreground": "#e7e7e7",
+			"commandCenter.border": "#e7e7e799",
+			"sash.hoverBorder": "#3399ff",
+			"statusBar.background": "#007fff",
+			"statusBar.foreground": "#e7e7e7",
+			"statusBarItem.hoverBackground": "#3399ff",
+			"statusBarItem.remoteBackground": "#007fff",
+			"statusBarItem.remoteForeground": "#e7e7e7",
+			"titleBar.activeBackground": "#007fff",
+			"titleBar.activeForeground": "#e7e7e7",
+			"titleBar.inactiveBackground": "#007fff99",
+			"titleBar.inactiveForeground": "#e7e7e799",
+			"tab.activeBackground": "#b9d3ee"
+		},
+		"peacock.color": "#007fff"
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			// {
+			// 	"name": "loginserver",
+			// 	"type": "go",
+			// 	"request": "launch",
+			// 	"mode": "auto",
+			// 	"program": "${workspaceFolder:server}/loginserver",
+			// 	"args":[
+			// 		"-conf=../bin/config/config.yml",
+			// 		"-cancelprint=false",
+			// 		"-closedebug=false",
+			// 	]
+			// },
+			{
+				"name": "gameserver",
+				"type": "go",
+				"request": "launch",
+				"mode": "auto",
+				"program": "${workspaceFolder:game}",
+				"cwd": "${workspaceFolder:bin}/game",
+				"args":[
+					"-conf=../config/config.yml",
+					"-cancelprint=false",
+				]
+			},
+			{
+				"name": "client",
+				"type": "go",
+				"request": "launch",
+				"mode": "auto",
+				"program": "${workspaceFolder:tool}/client_virtual",
+				"cwd": "${workspaceFolder:bin}/client",
+				"args":[
+					"-conf=../config/config.yml",
+					"-cancelprint=false",
+				]
+			}
+			//,
+			// {
+			// 	"name": "gateserver",
+			// 	"type": "go",
+			// 	"request": "launch",
+			// 	"mode": "auto",
+			// 	"program": "${workspaceFolder:server}/gateserver",
+			// 	"args":[
+			// 		"-conf=../bin/config/config.yml",
+			// 		"-cancelprint=false",
+			// 	]
+			// },
+			// {
+			// 	"name": "gendata",
+			// 	"type": "go",
+			// 	"request": "launch",
+			// 	"mode": "auto",
+			// 	"program": "${workspaceFolder:server}/gendata",
+			// }
+
+		],
+		// "compounds": [
+		// 	{
+		// 		"name": "game/gate",
+		// 		"configurations": [
+		// 			"gameserver",
+		// 			"gateserver"
+		// 		]
+		// 	}
+		// ] 
+	}
+}
